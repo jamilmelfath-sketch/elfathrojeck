@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elfathrojeck Terminal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+</head>
+<body>
+    <div class="matrix-bg" id="matrix"></div>
+    
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <div class="traffic-lights">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="terminal-title">elfathrojeck@termux:~</div>
+        </div>
+        
+        <div class="terminal-body" id="terminal">
+            <div class="line">
+                <span class="prompt">[~]$</span>
+                <span class="command">boot --hacker-mode</span>
+            </div>
+            <div class="line system">
+                <span class="output">Initializing secure shell...</span>
+            </div>
+            <div class="line system">
+                <span class="output">Loading modules: [████████████] 100%</span>
+            </div>
+            <div class="line system">
+                <span class="output">Bypassing firewall... OK</span>
+            </div>
+            <div class="line system">
+                <span class="output">Establishing connection to mainframe...</span>
+            </div>
+            <div class="line" id="welcome-line">
+                <span class="prompt">[~]$</span>
+                <span id="welcome-text"></span><span class="cursor">█</span>
+            </div>
+            <div class="line system hidden" id="after-welcome">
+                <span class="output">Access granted. Welcome, Operator.</span>
+            </div>
+            <div class="line system hidden" id="info">
+                <span class="output">System: Elfathrojeck v1.0 | Status: ONLINE</span>
+            </div>
+            <div class="line hidden" id="input-line">
+                <span class="prompt">[~]$</span>
+                <input type="text" id="cmd-input" autocomplete="off" autofocus>
+            </div>
+        </div>
+    </div>
+
+    <div class="hacker-badge">
+        <pre class="ascii-art">
+    ███████╗██╗     ███████╗ █████╗ ████████╗██╗  ██╗
+    ██╔════╝██║     ██╔════╝██╔══██╗╚══██╔══╝██║  ██║
+    █████╗  ██║     █████╗  ███████║   ██║   ███████║
+    ██╔══╝  ██║     ██╔══╝  ██╔══██║   ██║   ██╔══██║
+    ███████╗███████╗██║     ██║  ██║   ██║   ██║  ██║
+    ╚══════╝╚══════╝╚═╝     ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝
+              R O J E C K   T E R M I N A L
+        </pre>
+    </div>
+
+    <audio id="welcome-audio" src="welcome.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
